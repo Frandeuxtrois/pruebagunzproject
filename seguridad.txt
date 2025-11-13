@@ -1,0 +1,14 @@
+Prioridad #1 - Contraseñas (bcrypt):
+Instala bcryptjs en tu API: npm install bcryptjs.
+Modifica tu endpoint de registro (cuando lo crees) para que hashee las contraseñas antes de guardarlas.
+Modifica tu endpoint de login para que use bcrypt.compare.
+Crea un pequeño script para migrar las contraseñas actuales de tus usuarios a hashes.
+Prioridad #2 - Cifrado (HTTPS):
+Si tienes un dominio para tu web, usa Let's Encrypt para generar un certificado SSL gratuito.
+La opción más sencilla: crea una cuenta gratuita en Cloudflare, apunta tu dominio a sus servidores de nombres, y ellos gestionarán el HTTPS por ti, además de darte protección contra ataques DDoS.
+Prioridad #3 - Sesiones (JWT):
+Instala jsonwebtoken en tu API: npm install jsonwebtoken.
+Modifica el endpoint de login para que genere y devuelva un JWT si las credenciales son correctas.
+En tu frontend de React, cuando recibas el token, guárdalo en localStorage.
+Configura axios para que envíe ese token en la cabecera Authorization en todas las peticiones futuras.
+En tu API, crea un middleware que proteja las rutas que requieran autenticación.
