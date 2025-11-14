@@ -96,7 +96,7 @@ const App: React.FC = () => {
               <Header />
               <div id="page-wrapper" className="max-w-4xl mx-auto bg-[#bcbcbc] p-2.5 font-sans text-xs text-[#333]">
                 {/* El Navbar necesitará ser actualizado para usar <Link> en lugar de onClick */}
-                <Navbar onNavItemClick={() => {}} />
+                <Navbar />
                 <main id="content-grid" className="grid grid-cols-[180px_1fr_220px] gap-4">
                   <LeftColumn />
                   <CenterColumn>
