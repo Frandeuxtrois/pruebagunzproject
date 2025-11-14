@@ -33,29 +33,4 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
   return <>{children}</>;
 };
 
-export default ProtectedRoute;```
-
----
-
-### Fase 3: Crear el "Caparazón" del Panel de Admin
-
-Ahora creamos los componentes base para el Admin CP.
-
-1.  Crea una nueva carpeta: `src/components/admin/`.
-2.  Dentro de `src/components/admin/`, crea un archivo llamado `AdminDashboardView.tsx`. Pega esto:
-
-```tsx
-// src/components/admin/AdminDashboardView.tsx
-import React from 'react';
-
-const AdminDashboardView: React.FC = () => {
-    return (
-        <div>
-            <h1 className="text-2xl font-bold mb-4">Dashboard de Administración</h1>
-            <p>¡Bienvenido al Panel de Administración! Desde aquí podrás gestionar el servidor.</p>
-            <p>Selecciona una opción del menú para comenzar.</p>
-        </div>
-    );
-};
-
-export default AdminDashboardView;
+export default ProtectedRoute;

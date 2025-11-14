@@ -1,1 +1,1 @@
-front: jsonwebtoken, axios, vite, react, npm install sweetalert2, sweetalert2 react content -> backend: express, mssql,bcrypt, cors, net (nodulo native de node.js para conexiones tcp), 
+front: jsonwebtoken, axios, vite, react, npm install sweetalert2, sweetalert2, react router dom react content, react-modal -> backend: express, mssql,bcrypt, cors, net (nodulo native de node.js para conexiones tcp), 
