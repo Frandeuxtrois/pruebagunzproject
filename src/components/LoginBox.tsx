@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Box from './Box';
+import { Link } from 'react-router-dom';
 
 interface LoginBoxProps {
     onLogin: (username: string) => void;
@@ -97,7 +98,9 @@ const LoginBox: React.FC<LoginBoxProps> = ({ onLogin }) => {
         />
       </form>
       <div className="text-center mt-4 text-[11px]">
-        <a href="#" className="block my-1 text-[#555] hover:underline">Sos nuevo? registrate aca!</a>
+        <a href="#" className="block my-1 text-[#555] hover:underline">Olvidaste tu contraseña?</a>
+        {/* --- CAMBIO AQUÍ --- */}
+        <Link to="/register" className="block my-1 text-[#555] hover:underline">Sos nuevo? registrate aca!</Link>
       </div>
     </Box>
   );

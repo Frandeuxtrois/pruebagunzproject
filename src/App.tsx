@@ -22,7 +22,10 @@ import AdminLayout from './components/admin/AdminLayout';
 import AdminDashboardView from './components/admin/AdminDashboardView';
 // --- NUEVO: Importamos la nueva vista para manejar personajes ---
 import ManageCharactersView from './components/admin/ManageCharactersView'; 
-
+// <-- Importa la nueva RegisterView
+import RegisterView from './components/views/RegisterView'; 
+// --- 1. IMPORTA LA NUEVA VISTA DE CUENTAS ---
+import ManageAccountsView from './components/admin/ManageAccountsView';
 
 const App: React.FC = () => {
   const [user, setUser] = useState<User | null>(null);
@@ -80,7 +83,11 @@ const App: React.FC = () => {
           {/* --- MODIFICADO: Reemplazamos el placeholder con el componente real --- */}
           <Route path="manage-characters" element={<ManageCharactersView />} />
           
-          {/* Aquí añadiremos más sub-rutas de admin en el futuro, como 'manage-accounts' */}
+          {/* --- AÑADIDO: Nueva ruta para la gestión de cuentas --- */}
+          {/* La URL será /admin/manage-accounts */}
+          <Route path="manage-accounts" element={<ManageAccountsView />} />
+          
+          {/* Aquí añadiremos más sub-rutas de admin en el futuro */}
         </Route>
 
         {/* --- RUTAS PÚBLICAS (EL RESTO DE LA WEB) --- */}
@@ -103,6 +110,7 @@ const App: React.FC = () => {
                     {/* El contenido de CenterColumn también se gestiona con rutas anidadas */}
                     <Routes>
                       <Route index element={<HomeView />} />
+                      <Route path="register" element={<RegisterView />} />
                       <Route path="ranking-individual" element={<RankingIndividualView />} />
                       <Route path="ranking-clanes" element={<RankingClansView />} />
                       <Route path="user-panel" element={<UserPanelView />} />
