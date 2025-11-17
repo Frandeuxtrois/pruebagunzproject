@@ -26,6 +26,8 @@ import ManageCharactersView from './components/admin/ManageCharactersView';
 import RegisterView from './components/views/RegisterView'; 
 // --- 1. IMPORTA LA NUEVA VISTA DE CUENTAS ---
 import ManageAccountsView from './components/admin/ManageAccountsView';
+// --- IMPORTA LA NUEVA VISTA DE CLANES ---
+import ManageClansView from './components/admin/ManageClansView'; 
 
 const App: React.FC = () => {
   const [user, setUser] = useState<User | null>(null);
@@ -86,7 +88,7 @@ const App: React.FC = () => {
           {/* --- AÑADIDO: Nueva ruta para la gestión de cuentas --- */}
           {/* La URL será /admin/manage-accounts */}
           <Route path="manage-accounts" element={<ManageAccountsView />} />
-          
+          <Route path="manage-clans" element={<ManageClansView />} />
           {/* Aquí añadiremos más sub-rutas de admin en el futuro */}
         </Route>
 

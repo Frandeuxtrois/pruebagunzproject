@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  # No reescribir URLs para archivos que existen físicamente
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Reescribir todas las demás peticiones a index.html para que React Router las maneje
+  RewriteRule ^ index.html [L]
+</IfModule>

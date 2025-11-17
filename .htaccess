@@ -1,0 +1,18 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  
+  # Establece la ruta base para las reglas de reescritura.
+  # Esta es la línea más importante para una subcarpeta.
+  RewriteBase /gunz/Gunz2026/
+
+  # No reescribir la petición si es para el archivo index.html mismo
+  RewriteRule ^index\.html$ - [L]
+
+  # No reescribir si la petición es para un archivo que existe
+  RewriteCond %{REQUEST_FILENAME} !-f
+  # No reescribir si la petición es para un directorio que existe
+  RewriteCond %{REQUEST_FILENAME} !-d
+  
+  # Para todas las demás peticiones, redirige a tu index.html
+  RewriteRule . /gunz/Gunz2026/index.html [L]
+</IfModule>
